@@ -1,14 +1,16 @@
 # Git Commands
 
-```bash
-// https URL for the repository
-https://github.com/teeratus/command.git
+Repository URL:
+URL ของ repository:
 
-// SSH URL for the repository
+```bash
+https://github.com/teeratus/command.git
 git@github.com:teeratus/command.git
 ```
 
-## create a new repository on the command line
+## create a new repository
+Create a new repo on the command line.
+สร้าง repository ใหม่จาก command line
 
 ```bash
 git init
@@ -19,34 +21,38 @@ git remote add origin git@github.com:teeratus/command.git
 git push -u origin main
 ```
 
-## push an existing repository from the command line
+## push an existing repository
+Push an existing local repo to GitHub.
+ส่ง repository ที่มีอยู่แล้วขึ้น GitHub
 
 ```bash
 git remote add origin <repository-url>
-
-git remote add origin git@github.com:teeratus/command.git
 git branch -M main
 git push -u origin main
 ```
 
 ## clone an existing repository
+Clone a repo from GitHub.
+clone repository จาก GitHub
 
 ```bash
 git clone <repository-url>
-
-// Example using HTTPS
 git clone https://github.com/teeratus/command.git
-
-// Example using SSH
 git clone git@github.com:teeratus/command.git
-
 ```
 
-## pull with rebase
-
-Outgoing Changes และ Incoming Changes อยู่พร้อมกัน แปลว่ามีทั้ง commit ที่ยังไม่ push และ commit จาก GitHub ที่ยังไม่ pull ครับ ดังนั้น git pull --rebase มักจะเป็นตัวที่เหมาะกว่า
+## pull
+Use `git pull` when remote has new changes.
 
 ```bash
-git fetch
+git pull
+```
+
+Use `git pull --rebase` when local and remote have diverged.
+
+```bash
 git pull --rebase
 ```
+
+`Outgoing Changes` and `Incoming Changes` mean both sides have new commits.
+`Outgoing Changes` และ `Incoming Changes` หมายถึงทั้งสองฝั่งมี commit ใหม่
