@@ -58,3 +58,15 @@ git pull --rebase
 
 `Outgoing Changes` and `Incoming Changes` mean both sides have new commits.
 `Outgoing Changes` และ `Incoming Changes` หมายถึงทั้งสองฝั่งมี commit ใหม่
+
+
+## branch
+Create, list, and manage branches.
+สร้าง, แสดงรายการ, และจัดการสาขา
+
+```bash
+git branch          # list branches
+git branch <name>   # create a new branch
+git checkout <name> # switch to a branch
+git merge <name>    # merge a branch into the current branch
+```
